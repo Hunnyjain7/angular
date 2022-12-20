@@ -1,1 +1,24 @@
 <p>home works!</p>
+
+<br>
+<!-- Interpolation -->
+Welcome to the Angular {{content}}
+<br>
+<br>
+<!-- pipies -->
+My salary is {{salary | currency:'INR'}}
+<br>
+<br>
+ 
+<!-- Event Binding -->
+<button (click)="onClick('great')">Click ME</button>
+
+<br>
+<br>
+<!-- property binding -->
+<input [disabled]="isdisabled" [value]="isdisabled" #txt (change)="onClick(txt.value)" type="text">
+<br>
+<br>
+<!-- Two way Binding -->
+<input [(ngModel)]="content">
+

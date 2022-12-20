@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AddContactComponent } from './add-contact/add-contact.component';
 import { AccessRoutingModule } from './access/access-routing.module';
 import { StatusComponent } from './status/status.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { StatusComponent } from './status/status.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
     // AccessRoutingModule
   ],
   providers: [],

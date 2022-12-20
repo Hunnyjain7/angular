@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  content = 'Tutorial';
+  salary = 40000;
+  isdisabled = false;
+
+  ngOnInit() {
+  
+  }
+
+  onClick(name:any) {
+    alert(name);
+  }
 
 }
