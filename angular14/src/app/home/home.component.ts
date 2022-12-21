@@ -9,7 +9,7 @@ export class HomeComponent {
   content = 'Tutorial';
   salary = 40000;
   isdisabled = false;
-
+  colors = ['green', 'yellow', 'black']
   ngOnInit() {
   
   }

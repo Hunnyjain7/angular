@@ -6,7 +6,7 @@ Welcome to the Angular {{content}}
 <br>
 <br>
 <!-- pipies -->
-My salary is {{salary | currency:'INR'}}
+<h2 *ngIf="salary>0">My salary is {{salary | currency:'INR'}}</h2>
 <br>
 <br>
  
@@ -22,3 +22,6 @@ My salary is {{salary | currency:'INR'}}
 <!-- Two way Binding -->
 <input [(ngModel)]="content">
 
+<ul>
+    <li *ngFor="let item of colors">{{item}}</li>
+</ul>
