@@ -11,6 +11,10 @@ import { AccessRoutingModule } from './access/access-routing.module';
 import { StatusComponent } from './status/status.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import { UserComponent } from './user/user.component';
+import { MaterialModule } from 'src/Material-Module';
+import { TokenInterceptorService } from './Service/token-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -19,16 +23,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AboutComponent,
     ContactComponent,
     AddContactComponent,
+    UserComponent,
     // StatusComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MaterialModule
     // AccessRoutingModule
   ],
-  providers: [],
+  providers: [{provide:HTTP_INTERCEPTORS, useClass:TokenInterceptorService, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,17 @@
+.example-form {
+    min-width: 500px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  button {
+    margin: 8px;
+  }
+
+.mat-mdc-card {
+    align-items: center;
+}
